@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, user-scalable=no">
+    <title>3D立体动态相册</title>
+    <script src="../jquery.min.js"></script>
+    
+    <script>
+        $(function() {
+            $('body').bind("click", function() {
+                if ($('.box').hasClass("mhover")) {
+                    $('.box').removeClass("mhover")
+                } else {
+                    $('.box').addClass("mhover")
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="box">
+        你想干嘛?
+    </div>
+</body>
+
+</html>
