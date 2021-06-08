@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, user-scalable=no">
+    <title>TOkoo 酱</title>
+
+    <style type="text/css" media="screen">
+        @import url("../css/style.dsm.css");
+    </style>
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            function audioAutoPlay() {
+                var audio = document.getElementById('bgmusic');
+                audio.play();
+                document.addEventListener("WeixinJSBridgeReady", function() {
+                    audio.play();
+                }, false);
+            }
+            audioAutoPlay();
+        });
+        //--创建触摸监听，当浏览器打开页面时，触摸屏幕触发事件，进行音频播放
+        document.addEventListener('touchstart', function() {
+            function audioAutoPlay() {
+                var audio = document.getElementById('audio');
+                audio.play();
+            }
+            audioAutoPlay();
+
+        });
+
+        function autoPlayVideo() {
+            wx.config({
+                debug: false,
+                appId: "",
+                timestamp: 1,
+                nonceStr: "",
+                signature: "",
+                jsApiList: []
+            });
+            wx.ready(function() {
+                var autoplayVideo = document.getElementById("audio");
+                autoplayVideo.play()
+            })
+        };
+        autoPlayVideo();
+
+        function hasClassName(inElement, inClassName) {
+            var classStr = inElement.className;
+            var classArr = classStr.split(' ');
+            //            console.log(classArr);
+            for (var i = 0; i < classArr.length; i++) {
+                if (inClassName == classArr[i]) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        function addClassName(inElement, inClassName) {
+            if (!hasClassName(inElement, inClassName))
+                inElement.className = [inElement.className, inClassName].join(' ');
+        }
+
+        function removeClassName(inElement, inClassName) {
+            if (hasClassName(inElement, inClassName)) {
+                var j = 0;
+                var newClassArr = [];
+                var classArr = inElement.className.split(' ');
+                for (var i = 0; i < classArr.length; i++) {
+                    if (classArr[i] == inClassName) {
+                        continue;
+                    }
+                    newClassArr[j] = classArr[i];
+                    j++
+                }
+
+                inElement.className = newClassArr.join(' ');
+                //                第二种可以removeClass()
+                //                inElement.className = inElement.className.replace(inElement.className.match(inClassName),'');
+            }
+        }
+
+        function toggleClassName(inElement, inClassName) {
+            if (hasClassName(inElement, inClassName))
+                removeClassName(inElement, inClassName);
+            else
+                addClassName(inElement, inClassName);
+        }
+
+        function toggleShape() {
+            var shape = document.getElementById('shape');
+            if (hasClassName(shape, 'ring')) {
+                removeClassName(shape, 'ring');
+                addClassName(shape, 'cube');
+            } else {
+                if (hasClassName(shape, 'zhalie')) {
+                    removeClassName(shape, 'cube');
+                    removeClassName(shape, 'zhalie');
+                    addClassName(shape, 'ring');
+                } else {
+                    addClassName(shape, 'zhalie');
+                }
+            }
+
+            //转换样式translateZ（）导致的感觉太近
+            var stage = document.getElementById('stage');
+            if (hasClassName(shape, 'ring'))
+                stage.style.webkitTransform = 'translateZ(-200px)';
+
+
+            else
+                stage.style.webkitTransform = '';
+
+        }
+
+        function toggleBackfaces() {
+            var backfacesVisible = document.getElementById('backfaces').checked;
+            var shape = document.getElementById('shape');
+            if (backfacesVisible)
+                addClassName(shape, 'backfaces');
+            else
+                removeClassName(shape, 'backfaces');
+        }
+
+
+
+        function Html5Audio(url, loop) {
+            var audio = new Audio(url);
+            audio.loop = loop;
+            audio.autoplay = true;
+            audio.play();
+        }
+
+        //Html5Audio('http://demo.daimabiji.com/558/Music/Fade.mp3', true);
+        //Html5Audio('Music/despair.mp3', true);
+    </script>
+</head>
+
+<body>
+    <audio src="../Music/despair.mp3" preload="meta" loop autoplay id="bgmusic"></audio>
+    <!--<audio controls>
+        <source src="Music/despair.mp3" type="audio/mpeg">
+    </audio>-->
+    <!-- <audio src="Music/despair.mp3">请使用谷歌浏览器打开</audio> -->
+
+    <div class="controls" style="display: none;">
+        <h1>动画和过渡还有转换的结合</h1>
+        <p>这个是结合了css3几个比较吊的属性来完成的3d效果，这个可以有很多拓展，做3d的图片画廊，和什么3d的表啥的</p>
+        <p>点击切换样式能够让正方体的3d样式变成一个类似12变形的环</p>
+        <p>选中backface可见会让被你正面挡住的面显示出来</p>
+        <div><button onClick="toggleShape()">切换样式</button></div>
+        <div><input type="checkbox" id="backfaces" onClick="toggleBackfaces()" checked><label for="backfaces">backface是否可见</label></div>
+    </div>
+
+    <div id="container" onclick="toggleShape()">
+        <div id="stage">
+            <div id="shape" class="cube backfaces shapeAim">
+                <div class="plane one"></div>
+                <div class="plane two"></div>
+                <div class="plane three"></div>
+                <div class="plane four"></div>
+                <div class="plane five"></div>
+                <div class="plane six"></div>
+                <div class="plane seven"></div>
+                <div class="plane eight"></div>
+                <div class="plane nine"></div>
+                <div class="plane ten"></div>
+                <div class="plane eleven"></div>
+                <div class="plane twelve"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</htm>
