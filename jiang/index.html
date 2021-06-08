@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en">
 
@@ -10,7 +10,44 @@
         @import url("../css/style.css");
     </style>
     <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            function audioAutoPlay() {
+                var audio = document.getElementById('bgmusic');
+                audio.play();
+                document.addEventListener("WeixinJSBridgeReady", function() {
+                    audio.play();
+                }, false);
+            }
+            audioAutoPlay();
+        });
+        //--创建触摸监听，当浏览器打开页面时，触摸屏幕触发事件，进行音频播放
+        document.addEventListener('touchstart', function() {
+            function audioAutoPlay() {
+                var audio = document.getElementById('audio');
+                audio.play();
+            }
+            audioAutoPlay();
+
+        });
+
+        function autoPlayVideo() {
+            wx.config({
+                debug: false,
+                appId: "",
+                timestamp: 1,
+                nonceStr: "",
+                signature: "",
+                jsApiList: []
+            });
+            wx.ready(function() {
+                var autoplayVideo = document.getElementById("audio");
+                autoplayVideo.play()
+            })
+        };
+        autoPlayVideo();
+
         function hasClassName(inElement, inClassName) {
             var classStr = inElement.className;
             var classArr = classStr.split(' ');
@@ -64,8 +101,7 @@
                     removeClassName(shape, 'cube');
                     removeClassName(shape, 'zhalie');
                     addClassName(shape, 'ring');
-                }
-                else {
+                } else {
                     addClassName(shape, 'zhalie');
                 }
             }
@@ -101,7 +137,6 @@
 
         //Html5Audio('http://demo.daimabiji.com/558/Music/Fade.mp3', true);
         //Html5Audio('Music/despair.mp3', true);
-
     </script>
 </head>
 
