@@ -1,5 +1,5 @@
 body {
-    /*background-color: black;*/
+    background-color: black;
     color: white;
     font-family: 'Lucida Grande', Verdana, Arial;
     font-size: 12px;
@@ -39,7 +39,7 @@ body {
     top: 50%;
     margin: 0 auto;
     margin-top: -100px;
-    height: 100vh;
+    height: 50vh;
     width: 200px;
     -webkit-transform: translateZ(0px);
     transform: translateZ(0px);
@@ -72,6 +72,11 @@ body {
     -moz-backface-visibility: hidden;
     backface-visibility: hidden;
     cursor: pointer;
+}
+
+.zhalie .plane {
+    height: 400px;
+    width: 400px;
 }
 
 #shape.backfaces .plane {
@@ -232,103 +237,103 @@ body {
 .cube.zhalie>.two {
     opacity: 0.8;
     border: none;
-    -webkit-transform: scale3d(1.5, 1.5, 1.5) rotateX(90deg) translateZ(100px);
-    -o-transform: scale3d(1.5, 1.5, 1.5) rotateX(90deg) translateZ(100px);
-    -moz-transform: scale3d(1.5, 1.5, 1.5) rotateX(90deg) translateZ(100px);
-    transform: scale3d(1.5, 1.5, 1.5) rotateX(90deg) translateZ(100px);
+    -webkit-transform: scale3d(1.5, 1.5, 1.5) rotateX(90deg) translateZ(200px);
+    -o-transform: scale3d(1.5, 1.5, 1.5) rotateX(90deg) translateZ(200px);
+    -moz-transform: scale3d(1.5, 1.5, 1.5) rotateX(90deg) translateZ(200px);
+    transform: scale3d(1.5, 1.5, 1.5) rotateX(90deg) translateZ(200px);
 }
 
 .cube.zhalie>.one {
     opacity: .8;
     border: none;
-    -webkit-transform: scale3d(1.5, 1.5, 1.5) translateZ(100px);
-    -o-transform: scale3d(1.5, 1.5, 1.5) translateZ(100px);
-    -moz-transform: scale3d(1.5, 1.5, 1.5) translateZ(100px);
-    transform: scale3d(1.5, 1.5, 1.5) translateZ(100px);
+    -webkit-transform: scale3d(1.5, 1.5, 1.5) translateZ(200px);
+    -o-transform: scale3d(1.5, 1.5, 1.5) translateZ(200px);
+    -moz-transform: scale3d(1.5, 1.5, 1.5) translateZ(200px);
+    transform: scale3d(1.5, 1.5, 1.5) translateZ(200px);
 }
 
 .cube.zhalie>.five {
     opacity: .8;
     border: none;
-    -webkit-transform: scale3d(1.5, 1.5, 1.5) rotateY(90deg) translateZ(100px);
-    -o-transform: scale3d(1.5, 1.5, 1.5) rotateY(90deg) translateZ(100px);
-    -moz-transform: scale3d(1.5, 1.5, 1.5) rotateY(90deg) translateZ(100px);
-    transform: scale3d(1.5, 1.5, 1.5) rotateY(90deg) translateZ(100px);
+    -webkit-transform: scale3d(1.5, 1.5, 1.5) rotateY(90deg) translateZ(200px);
+    -o-transform: scale3d(1.5, 1.5, 1.5) rotateY(90deg) translateZ(200px);
+    -moz-transform: scale3d(1.5, 1.5, 1.5) rotateY(90deg) translateZ(200px);
+    transform: scale3d(1.5, 1.5, 1.5) rotateY(90deg) translateZ(200px);
 }
 
 .cube.zhalie>.three {
     opacity: .8;
     border: none;
-    -webkit-transform: scale3d(1.5, 1.5, 1.5) rotateY(-180deg) translateZ(100px) rotateZ(180deg);
-    -o-transform: scale3d(1.5, 1.5, 1.5) rotateY(-180deg) translateZ(100px) rotateZ(180deg);
-    -moz-transform: scale3d(1.5, 1.5, 1.5) rotateY(-180deg) translateZ(100px) rotateZ(180deg);
-    transform: scale3d(1.5, 1.5, 1.5) rotateY(-180deg) translateZ(100px) rotateZ(180deg);
+    -webkit-transform: scale3d(1.5, 1.5, 1.5) rotateY(-180deg) translateZ(200px) rotateZ(180deg);
+    -o-transform: scale3d(1.5, 1.5, 1.5) rotateY(-180deg) translateZ(200px) rotateZ(180deg);
+    -moz-transform: scale3d(1.5, 1.5, 1.5) rotateY(-180deg) translateZ(200px) rotateZ(180deg);
+    transform: scale3d(1.5, 1.5, 1.5) rotateY(-180deg) translateZ(200px) rotateZ(180deg);
 }
 
 .cube.zhalie>.four {
     opacity: .8;
     border: none;
-    -webkit-transform: scale3d(1.5, 1.5, 1.5) rotateX(-90deg) translateZ(100px);
-    -o-transform: scale3d(1.5, 1.5, 1.5) rotateX(-90deg) translateZ(100px);
-    -moz-transform: scale3d(1.5, 1.5, 1.5) rotateX(-90deg) translateZ(100px);
-    transform: scale3d(1.5, 1.5, 1.5) rotateX(-90deg) translateZ(100px);
+    -webkit-transform: scale3d(1.5, 1.5, 1.5) rotateX(-90deg) translateZ(200px);
+    -o-transform: scale3d(1.5, 1.5, 1.5) rotateX(-90deg) translateZ(200px);
+    -moz-transform: scale3d(1.5, 1.5, 1.5) rotateX(-90deg) translateZ(200px);
+    transform: scale3d(1.5, 1.5, 1.5) rotateX(-90deg) translateZ(200px);
 }
 
 .cube.zhalie>.six {
     opacity: .8;
     border: none;
-    -webkit-transform: scale3d(1.5, 1.5, 1.5) rotateY(-90deg) translateZ(100px);
-    -o-transform: scale3d(1.5, 1.5, 1.5) rotateY(-90deg) translateZ(100px);
-    -moz-transform: scale3d(1.5, 1.5, 1.5) rotateY(-90deg) translateZ(100px);
-    transform: scale3d(1.5, 1.5, 1.5) rotateY(-90deg) translateZ(100px);
+    -webkit-transform: scale3d(1.5, 1.5, 1.5) rotateY(-90deg) translateZ(200px);
+    -o-transform: scale3d(1.5, 1.5, 1.5) rotateY(-90deg) translateZ(200px);
+    -moz-transform: scale3d(1.5, 1.5, 1.5) rotateY(-90deg) translateZ(200px);
+    transform: scale3d(1.5, 1.5, 1.5) rotateY(-90deg) translateZ(200px);
 }
 
 .cube.zhalie>.eight {
     background-size: cover;
-    -webkit-transform: scale3d(0.5, 0.5, 0.5) rotateX(90deg) translateZ(100px);
-    -o-transform: scale3d(0.5, 0.5, 0.5) rotateX(90deg) translateZ(100px);
-    -moz-transform: scale3d(0.5, 0.5, 0.5) rotateX(90deg) translateZ(100px);
-    transform: scale3d(0.5, 0.5, 0.5) rotateX(90deg) translateZ(100px);
+    -webkit-transform: scale3d(0.5, 0.5, 0.5) rotateX(90deg) translateZ(200px);
+    -o-transform: scale3d(0.5, 0.5, 0.5) rotateX(90deg) translateZ(200px);
+    -moz-transform: scale3d(0.5, 0.5, 0.5) rotateX(90deg) translateZ(200px);
+    transform: scale3d(0.5, 0.5, 0.5) rotateX(90deg) translateZ(200px);
 }
 
 .cube.zhalie>.seven {
     background-size: cover;
-    -webkit-transform: scale3d(0.5, 0.5, 0.5) translateZ(100px);
-    -o-transform: scale3d(0.5, 0.5, 0.5) translateZ(100px);
-    -moz-transform: scale3d(0.5, 0.5, 0.5) translateZ(100px);
-    transform: scale3d(0.5, 0.5, 0.5) translateZ(100px);
+    -webkit-transform: scale3d(0.5, 0.5, 0.5) translateZ(200px);
+    -o-transform: scale3d(0.5, 0.5, 0.5) translateZ(200px);
+    -moz-transform: scale3d(0.5, 0.5, 0.5) translateZ(200px);
+    transform: scale3d(0.5, 0.5, 0.5) translateZ(200px);
 }
 
 .cube.zhalie>.eleven {
     background-size: cover;
-    -webkit-transform: scale3d(0.5, 0.5, 0.5) rotateY(90deg) translateZ(100px);
-    -o-transform: scale3d(0.5, 0.5, 0.5) rotateY(90deg) translateZ(100px);
-    -moz-transform: scale3d(0.5, 0.5, 0.5) rotateY(90deg) translateZ(100px);
-    transform: scale3d(0.5, 0.5, 0.5) rotateY(90deg) translateZ(100px);
+    -webkit-transform: scale3d(0.5, 0.5, 0.5) rotateY(90deg) translateZ(200px);
+    -o-transform: scale3d(0.5, 0.5, 0.5) rotateY(90deg) translateZ(200px);
+    -moz-transform: scale3d(0.5, 0.5, 0.5) rotateY(90deg) translateZ(200px);
+    transform: scale3d(0.5, 0.5, 0.5) rotateY(90deg) translateZ(200px);
 }
 
 .cube.zhalie>.nine {
     background-size: cover;
-    -webkit-transform: scale3d(0.5, 0.5, 0.5) rotateY(-180deg) translateZ(100px) rotateZ(180deg);
-    -o-transform: scale3d(0.5, 0.5, 0.5) rotateY(-180deg) translateZ(100px) rotateZ(180deg);
-    -moz-transform: scale3d(0.5, 0.5, 0.5) rotateY(-180deg) translateZ(100px) rotateZ(180deg);
-    transform: scale3d(0.5, 0.5, 0.5) rotateY(-180deg) translateZ(100px) rotateZ(180deg);
+    -webkit-transform: scale3d(0.5, 0.5, 0.5) rotateY(-180deg) translateZ(200px) rotateZ(180deg);
+    -o-transform: scale3d(0.5, 0.5, 0.5) rotateY(-180deg) translateZ(200px) rotateZ(180deg);
+    -moz-transform: scale3d(0.5, 0.5, 0.5) rotateY(-180deg) translateZ(200px) rotateZ(180deg);
+    transform: scale3d(0.5, 0.5, 0.5) rotateY(-180deg) translateZ(200px) rotateZ(180deg);
 }
 
 .cube.zhalie>.ten {
     background-size: cover;
-    -webkit-transform: scale3d(0.5, 0.5, 0.5) rotateX(-90deg) translateZ(100px);
-    -o-transform: scale3d(0.5, 0.5, 0.5) rotateX(-90deg) translateZ(100px);
-    -moz-transform: scale3d(0.5, 0.5, 0.5) rotateX(-90deg) translateZ(100px);
-    transform: scale3d(0.5, 0.5, 0.5) rotateX(-90deg) translateZ(100px);
+    -webkit-transform: scale3d(0.5, 0.5, 0.5) rotateX(-90deg) translateZ(200px);
+    -o-transform: scale3d(0.5, 0.5, 0.5) rotateX(-90deg) translateZ(200px);
+    -moz-transform: scale3d(0.5, 0.5, 0.5) rotateX(-90deg) translateZ(200px);
+    transform: scale3d(0.5, 0.5, 0.5) rotateX(-90deg) translateZ(200px);
 }
 
 .cube.zhalie>.twelve {
     background-size: cover;
-    -webkit-transform: scale3d(0.5, 0.5, 0.5) rotateY(-90deg) translateZ(100px);
-    -o-transform: scale3d(0.5, 0.5, 0.5) rotateY(-90deg) translateZ(100px);
-    -moz-transform: scale3d(0.5, 0.5, 0.5) rotateY(-90deg) translateZ(100px);
-    transform: scale3d(0.5, 0.5, 0.5) rotateY(-90deg) translateZ(100px);
+    -webkit-transform: scale3d(0.5, 0.5, 0.5) rotateY(-90deg) translateZ(200px);
+    -o-transform: scale3d(0.5, 0.5, 0.5) rotateY(-90deg) translateZ(200px);
+    -moz-transform: scale3d(0.5, 0.5, 0.5) rotateY(-90deg) translateZ(200px);
+    transform: scale3d(0.5, 0.5, 0.5) rotateY(-90deg) translateZ(200px);
 }
 
 
